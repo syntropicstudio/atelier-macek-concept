@@ -77,21 +77,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Ateliér Macek s.r.o. – Projekční kancelář a inženýrská činnost" },
+      {
+        name: "description",
+        content:
+          "Ateliér Macek s.r.o. – projekční a inženýrská kancelář v Kuřimi. Projektová dokumentace, stavební povolení, rozpočty a technické poradenství pro rezidenční i komerční stavby.",
+      },
+      { name: "author", content: "Ateliér Macek s.r.o." },
+      { property: "og:title", content: "Ateliér Macek s.r.o. – Projekční a inženýrská kancelář" },
+      {
+        property: "og:description",
+        content: "Od první skici až po stavební povolení. Precizní projektová dokumentace a inženýrská činnost.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
