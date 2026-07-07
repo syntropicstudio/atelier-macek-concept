@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Linkedin } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 export function Footer() {
   return (
@@ -7,15 +8,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center border border-[var(--gold)]/60 text-[var(--gold)] font-display text-lg">
-                A
-              </span>
-              <div className="leading-tight">
-                <div className="font-display text-lg">Ateliér Macek</div>
-                <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-                  s.r.o. · Kuřim
-                </div>
-              </div>
+              <img src={logoAsset.url} alt="Ateliér Macek" className="h-14 w-auto" />
             </div>
             <p className="mt-6 max-w-md text-sm text-muted-foreground leading-relaxed">
               Projekční a inženýrská kancelář zaměřená na precizní projektovou
