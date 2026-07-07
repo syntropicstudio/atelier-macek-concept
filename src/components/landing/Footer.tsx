@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="Ateliér Macek" className="h-14 w-auto" />
+              <img src={logoAsset.url} alt="Ateliér Macek" className="h-[84px] w-auto" />
             </div>
             <p className="mt-6 max-w-md text-sm text-muted-foreground leading-relaxed">
               Projekční a inženýrská kancelář zaměřená na precizní projektovou

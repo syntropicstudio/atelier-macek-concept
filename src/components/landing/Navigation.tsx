@@ -34,7 +34,7 @@ export function Navigation() {
           <img
             src={logoAsset.url}
             alt="Ateliér Macek"
-            className="h-11 w-auto"
+            className="h-[66px] w-auto"
           />
         </a>
 
