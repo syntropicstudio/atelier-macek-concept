@@ -31,15 +31,11 @@ export function Navigation() {
     >
       <div className="container-x flex h-20 items-center justify-between">
         <a href="#domu" className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center border border-[var(--gold)]/60 text-[var(--gold)] font-display text-lg">
-            A
-          </span>
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display text-lg text-foreground">Ateliér Macek</span>
-            <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-              s.r.o.
-            </span>
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="Ateliér Macek"
+            className="h-11 w-auto"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
