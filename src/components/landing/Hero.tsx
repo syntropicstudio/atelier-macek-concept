@@ -26,7 +26,7 @@ export function Hero() {
             <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
               Ateliér Macek
             </span>
-            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Od první skici<br />
               až po <span className="italic text-[var(--gold)]">stavební povolení</span>.
             </span>
