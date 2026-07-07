@@ -23,6 +23,7 @@ export function Hero() {
             Projekční a inženýrská kancelář · Kuřim
           </span>
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02] text-foreground">
+            Ateliér Macek<br />
             Od první skici<br />
             až po <span className="italic text-[var(--gold)]">stavební povolení</span>.
           </h1>
