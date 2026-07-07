@@ -19,8 +19,8 @@ export function WhyUs() {
             Proč Ateliér Macek
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight">
-            Šest důvodů, proč vám<br />
-            <span className="italic text-[var(--gold)]">svěříme stavbu snů</span> do rukou.
+            Šest důvodů, proč nám<br />
+            <span className="italic text-[var(--gold)]">svěřit stavbu snů</span> do rukou.
           </h2>
         </div>
 
