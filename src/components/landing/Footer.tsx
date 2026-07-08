@@ -1,5 +1,5 @@
 import { Instagram, Facebook, Linkedin } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="Ateliér Macek" className="h-[84px] w-auto" />
+              <img src={logo} alt="Ateliér Macek" className="h-[84px] w-auto" />
             </div>
             <p className="mt-6 max-w-md text-sm text-muted-foreground leading-relaxed">
               Projekční a inženýrská kancelář zaměřená na precizní projektovou
