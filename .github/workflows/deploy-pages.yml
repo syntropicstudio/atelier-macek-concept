@@ -35,10 +35,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build site
-        env:
-          NODE_ENV: production
-          GITHUB_PAGES_REPO: atelier-macek-concept
-        run: bun run build
+        run: bun run build:pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist
 
   deploy:
     needs: build

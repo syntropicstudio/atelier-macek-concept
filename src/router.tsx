@@ -10,6 +10,8 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
+    // BASE_URL is "/" in dev and "/atelier-macek-concept/" in Pages build (set via vite.config.pages.ts)
+    basepath: import.meta.env.BASE_URL,
   });
 
   return router;
