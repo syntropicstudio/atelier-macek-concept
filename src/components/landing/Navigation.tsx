@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#domu", label: "Domů" },
@@ -32,7 +32,7 @@ export function Navigation() {
       <div className="container-x flex h-20 items-center justify-between">
         <a href="#domu" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logo}
             alt="Ateliér Macek"
             className="h-[79px] w-auto"
           />
