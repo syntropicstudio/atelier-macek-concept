@@ -1,54 +1,38 @@
-import { access, copyFile, writeFile } from "node:fs/promises";
-import { constants } from "node:fs";
+import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const outputPublicDir = resolve(process.cwd(), ".output", "public");
 
-async function exists(filePath) {
-  try {
-    await access(filePath, constants.F_OK);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function createRedirect404Html() {
+function createStatic404Html() {
   return `<!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>404 - Stranka nenalezena</title>
     <meta name="robots" content="noindex" />
-    <script>
-      (function () {
-        var path = window.location.pathname || "/";
-        var query = window.location.search || "";
-        var hash = window.location.hash || "";
-        var target = "./?p=" + encodeURIComponent(path + query + hash);
-        window.location.replace(target);
-      })();
-    </script>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 2rem; line-height: 1.4; }
+      .box { max-width: 640px; margin: 10vh auto; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
   </head>
   <body>
-    Redirecting...
+    <div class="box">
+      <h1>404</h1>
+      <p>Stranka nebyla nalezena.</p>
+      <p><a href="/atelier-macek-concept/">Prejit na uvodni stranku</a></p>
+    </div>
   </body>
 </html>
 `;
 }
 
 async function main() {
-  const indexHtml = resolve(outputPublicDir, "index.html");
   const target404 = resolve(outputPublicDir, "404.html");
-
-  if (await exists(indexHtml)) {
-    await copyFile(indexHtml, target404);
-    console.log(`Created ${target404} from ${indexHtml}.`);
-    return;
-  }
-
-  await writeFile(target404, createRedirect404Html(), "utf8");
-  console.log(`Created ${target404} as redirect fallback (index.html not found).`);
+  await writeFile(target404, createStatic404Html(), "utf8");
+  console.log(`Created static ${target404} (no redirect fallback).`);
 }
 
 main().catch((error) => {
