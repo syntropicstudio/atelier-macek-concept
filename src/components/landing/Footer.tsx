@@ -15,18 +15,6 @@ export function Footer() {
               dokumentaci, stavební povolení a technické poradenství pro
               privátní i komerční klienty.
             </p>
-            <div className="mt-8 flex gap-3">
-              {[Instagram, Facebook, Linkedin].map((I, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="social"
-                  className="grid h-10 w-10 place-items-center border border-white/10 text-muted-foreground hover:border-[var(--gold)] hover:text-[var(--gold)] transition-colors"
-                >
-                  <I size={16} strokeWidth={1.5} />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>

@@ -1,7 +1,7 @@
 import { ShieldCheck, FileSearch, Coins, UserCheck, MessageCircle, ClipboardCheck } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "Zkušený tým", desc: "Autorizovaní inženýři a projektanti s dlouholetou praxí v oboru." },
+  { icon: ShieldCheck, title: "Zkušený tým", desc: "Inženýři a projektanti s dlouholetou praxí v oboru." },
   { icon: FileSearch, title: "Přesná dokumentace", desc: "Detailně zpracované projekty bez skrytých překvapení na stavbě." },
   { icon: Coins, title: "Transparentní ceny", desc: "Férová a předem odsouhlasená kalkulace každé etapy projektu." },
   { icon: UserCheck, title: "Individuální přístup", desc: "Každý projekt vedeme osobně – žádné šablonovité řešení." },
