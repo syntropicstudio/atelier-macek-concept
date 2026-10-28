@@ -10,8 +10,9 @@ export function Contact() {
   const [showMap, setShowMap] = useState(false);
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const get = (k: string) => String(data.get(k) ?? "").trim();
+    const form = e.currentTarget;
+    const get = (k: string) =>
+      (form.querySelector<HTMLInputElement>(`#${k}`)?.value ?? "").trim();
     const subject = `Poptávka – ${get("type")} – ${get("name")}`;
     const body = [
       `Jméno a příjmení: ${get("name")}`,
@@ -141,7 +142,6 @@ export function Contact() {
                   </label>
                   <input
                     id={f.id}
-                    name={f.id}
                     type={f.type}
                     required
                     className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)] transition-colors"
@@ -158,7 +158,6 @@ export function Contact() {
                 </label>
                 <select
                   id="type"
-                  name="type"
                   className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)]"
                 >
                   <option className="bg-[var(--charcoal)]">Rodinný dům</option>
@@ -179,7 +178,6 @@ export function Contact() {
                 </label>
                 <textarea
                   id="msg"
-                  name="msg"
                   rows={4}
                   className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)] resize-none"
                 />
