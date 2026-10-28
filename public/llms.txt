@@ -1,0 +1,23 @@
+# Ateliér Macek s.r.o.
+
+> Projekční a inženýrská kancelář v Kuřimi (Jihomoravský kraj, ČR). Zpracovává projektovou dokumentaci, dokumentaci pro stavební povolení, inženýrskou činnost, rozpočty a technické poradenství pro rodinné, bytové i komerční stavby a rekonstrukce.
+
+## Služby
+- Projektová dokumentace (od studie po provádějící projekt)
+- Dokumentace pro stavební povolení (DSP)
+- Inženýrská činnost (vyřízení povolení a stanovisek)
+- Rozpočty a výkaz výměr
+- Technické poradenství
+
+## Firemní údaje
+- Název: Ateliér Macek s.r.o.
+- Sídlo: Otevřená 680/7, 664 34 Kuřim
+- Kancelář: Křížkovského 1770/7, Kuřim
+- IČO: 17738377, DIČ: CZ17738377
+- E-mail: info@ateliermacek.cz
+- Telefon: +420 777 123 456
+
+## Odkazy
+- [Hlavní stránka](https://syntropicstudio.github.io/atelier-macek-concept/): přehled služeb, referencí a kontaktů
+- [Kontakt a poptávka](https://syntropicstudio.github.io/atelier-macek-concept/#kontakt)
+- [Sitemap](https://syntropicstudio.github.io/atelier-macek-concept/sitemap.xml)

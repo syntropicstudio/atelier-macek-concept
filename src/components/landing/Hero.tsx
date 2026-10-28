@@ -9,6 +9,7 @@ export function Hero() {
           src={hero}
           alt="Moderní architektura navržená Ateliérem Macek"
           className="h-full w-full object-cover slow-zoom"
+          fetchPriority="high"
           width={1920}
           height={1280}
         />
