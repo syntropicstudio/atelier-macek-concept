@@ -118,8 +118,9 @@ export function Portfolio() {
             >
               <img
                 src={p.img}
-                alt={p.title}
+                alt={`${p.title}, ${p.location} – ${p.desc}`}
                 loading="lazy"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)] via-[var(--ink)]/40 to-transparent" />

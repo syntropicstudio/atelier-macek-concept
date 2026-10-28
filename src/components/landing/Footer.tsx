@@ -42,13 +42,23 @@ export function Footer() {
             <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--gold)] mb-5">
               Kontakt
             </div>
-            <ul className="space-y-3 text-sm text-foreground/70">
-              <li>Otevřená 680/7</li>
-              <li>664 34 Kuřim</li>
-              <li>IČO 17738377</li>
-              <li>info@ateliermacek.cz</li>
-              <li>+420 777 123 456</li>
-            </ul>
+            <address className="not-italic">
+              <ul className="space-y-3 text-sm text-foreground/70">
+                <li>Otevřená 680/7</li>
+                <li>664 34 Kuřim</li>
+                <li>IČO 17738377</li>
+                <li>
+                  <a href="mailto:info@ateliermacek.cz" className="hover:text-[var(--gold)]">
+                    info@ateliermacek.cz
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+420777123456" className="hover:text-[var(--gold)]">
+                    +420 777 123 456
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
         </div>
 

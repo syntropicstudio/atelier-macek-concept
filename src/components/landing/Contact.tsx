@@ -42,7 +42,15 @@ export function Contact() {
                     <dt className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                       {k}
                     </dt>
-                    <dd className="mt-1 text-foreground">{v}</dd>
+                    <dd className="mt-1 text-foreground">
+                      {k === "Telefon" ? (
+                        <a href={`tel:${v.replace(/\s/g, "")}`}>{v}</a>
+                      ) : k === "E-mail" ? (
+                        <a href={`mailto:${v}`}>{v}</a>
+                      ) : (
+                        v
+                      )}
+                    </dd>
                   </div>
                 </div>
               ))}
