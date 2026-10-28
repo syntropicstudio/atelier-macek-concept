@@ -21,3 +21,5 @@
 - [Hlavní stránka](https://syntropicstudio.github.io/atelier-macek-concept/): přehled služeb, referencí a kontaktů
 - [Kontakt a poptávka](https://syntropicstudio.github.io/atelier-macek-concept/#kontakt)
 - [Sitemap](https://syntropicstudio.github.io/atelier-macek-concept/sitemap.xml)
+- [Ochrana osobních údajů](https://syntropicstudio.github.io/atelier-macek-concept/ochrana-osobnich-udaju)
+- [Cookies](https://syntropicstudio.github.io/atelier-macek-concept/cookies)

@@ -1,5 +1,7 @@
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { pageUrl } from "@/lib/url";
+import { openCookieNotice } from "@/components/CookieBanner";
 
 export function Footer() {
   return (
@@ -30,7 +32,7 @@ export function Footer() {
                 ["#kontakt", "Kontakt"],
               ].map(([h, l]) => (
                 <li key={h}>
-                  <a href={h} className="text-foreground/70 hover:text-[var(--gold)] transition-colors">
+                  <a href={pageUrl(h)} className="text-foreground/70 hover:text-[var(--gold)] transition-colors">
                     {l}
                   </a>
                 </li>
@@ -65,8 +67,8 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Ateliér Macek s.r.o. · Všechna práva vyhrazena.</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground">Ochrana osobních údajů</a>
-            <a href="#" className="hover:text-foreground">Cookies</a>
+            <a href={pageUrl("ochrana-osobnich-udaju")} className="hover:text-foreground">Ochrana osobních údajů</a>
+            <a href={pageUrl("cookies")} className="hover:text-foreground">Cookies</a>
           </div>
         </div>
       </div>
