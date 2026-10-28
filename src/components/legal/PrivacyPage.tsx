@@ -20,7 +20,7 @@ export function PrivacyPage() {
       <ul>
         <li>
           <strong>Poptávka / kontaktní formulář a e-mail:</strong> jméno a příjmení, e-mail,
-          telefon, typ a popis projektu. Účel: vyřízení poptávky a komunikace s vámi. Právní
+          telefon, typ a popis projektu. Formulář na webu údaje neodesílá na server: po kliknutí otevře ve vašem e-mailovém programu předvyplněnou zprávu, která se odešle až vaším potvrzením. Účel: vyřízení poptávky a komunikace s vámi. Právní
           základ: jednání o uzavření smlouvy (čl. 6 odst. 1 písm. b) GDPR) a oprávněný zájem
           správce (písm. f).
         </li>
