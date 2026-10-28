@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
+import { pageUrl } from "@/lib/url";
 import { Phone, Mail, MapPin, Clock, Building, Send, Check } from "lucide-react";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [showMap, setShowMap] = useState(false);
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     setSent(true);
@@ -57,13 +59,40 @@ export function Contact() {
             </dl>
 
             <div className="mt-12 aspect-[16/10] w-full overflow-hidden border border-white/10">
-              <iframe
-                title="Mapa – Ateliér Macek Kuřim"
-                src="https://www.google.com/maps?q=Otev%C5%99en%C3%A1%20680%2F7%2C%20Ku%C5%99im&output=embed"
-                className="h-full w-full grayscale contrast-125"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              {showMap ? (
+                <iframe
+                  title="Mapa – Ateliér Macek Kuřim"
+                  src="https://www.google.com/maps?q=Otev%C5%99en%C3%A1%20680%2F7%2C%20Ku%C5%99im&output=embed"
+                  className="h-full w-full grayscale contrast-125"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[var(--charcoal)] p-6 text-center">
+                  <p className="max-w-sm text-sm text-muted-foreground">
+                    Zobrazením mapy se načte služba Google Maps, která může ukládat cookies a
+                    zpracovat vaši IP adresu. Více v{" "}
+                    <a href={pageUrl("cookies")} className="underline">
+                      zásadách cookies
+                    </a>
+                    .
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowMap(true)}
+                    className="border border-[var(--gold)] px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--ink)] transition-all"
+                  >
+                    Zobrazit mapu
+                  </button>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Otev%C5%99en%C3%A1%20680%2F7%2C%20Ku%C5%99im"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground underline"
+                  >
+                    Otevřít v Google Maps
+                  </a>
+                </div>
+              )}
             </div>
           </div>
 
@@ -150,7 +179,11 @@ export function Contact() {
               </button>
               <p className="text-[11px] text-muted-foreground">
                 Odesláním souhlasíte se zpracováním osobních údajů pro účely
-                vyřízení poptávky.
+                vyřízení poptávky. Více v{" "}
+                <a href={pageUrl("ochrana-osobnich-udaju")} className="underline">
+                  zásadách ochrany osobních údajů
+                </a>
+                .
               </p>
             </div>
           </form>

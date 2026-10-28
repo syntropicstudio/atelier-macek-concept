@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { pageUrl } from "@/lib/url";
 
 const links = [
   { href: "#domu", label: "Domů" },
@@ -30,7 +31,7 @@ export function Navigation() {
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between">
-        <a href="#domu" className="flex items-center gap-3">
+        <a href={pageUrl("#domu")} className="flex items-center gap-3">
           <img
             src={logo}
             alt="Ateliér Macek"
@@ -42,7 +43,7 @@ export function Navigation() {
           {links.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={pageUrl(l.href)}
               className="gold-line text-sm text-foreground/80 hover:text-foreground transition-colors"
             >
               {l.label}
@@ -51,7 +52,7 @@ export function Navigation() {
         </nav>
 
         <a
-          href="#kontakt"
+          href={pageUrl("#kontakt")}
           className="hidden md:inline-flex items-center gap-2 border border-[var(--gold)] px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--ink)] transition-all duration-300"
         >
           Poptat konzultaci
@@ -72,7 +73,7 @@ export function Navigation() {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={pageUrl(l.href)}
                 onClick={() => setOpen(false)}
                 className="text-base text-foreground/90 py-2"
               >
@@ -80,7 +81,7 @@ export function Navigation() {
               </a>
             ))}
             <a
-              href="#kontakt"
+              href={pageUrl("#kontakt")}
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center border border-[var(--gold)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--gold)]"
             >
