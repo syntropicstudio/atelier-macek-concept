@@ -2,13 +2,34 @@ import { useState, type FormEvent } from "react";
 import { pageUrl } from "@/lib/url";
 import { Phone, Mail, MapPin, Clock, Building, Send, Check } from "lucide-react";
 
+const CONTACT_EMAIL = "info@ateliermacek.cz";
+const MAX_MAILTO_LENGTH = 1800;
+
 export function Contact() {
   const [sent, setSent] = useState(false);
   const [showMap, setShowMap] = useState(false);
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const get = (k: string) => String(data.get(k) ?? "").trim();
+    const subject = `Poptávka – ${get("type")} – ${get("name")}`;
+    const body = [
+      `Jméno a příjmení: ${get("name")}`,
+      `E-mail: ${get("email")}`,
+      `Telefon: ${get("phone")}`,
+      `Typ projektu: ${get("type")}`,
+      "",
+      "Popis projektu:",
+      get("msg"),
+    ].join("\r\n");
+    const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Long mailto links are truncated or rejected by many mail clients.
+    const safe = href.length > MAX_MAILTO_LENGTH;
+    window.location.href = safe
+      ? `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body.slice(0, 900) + "\r\n[…popis zkrácen – doplňte prosím zbytek]")}`
+      : href;
     setSent(true);
-    setTimeout(() => setSent(false), 4000);
+    setTimeout(() => setSent(false), 6000);
   };
 
   return (
@@ -120,6 +141,7 @@ export function Contact() {
                   </label>
                   <input
                     id={f.id}
+                    name={f.id}
                     type={f.type}
                     required
                     className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)] transition-colors"
@@ -136,6 +158,7 @@ export function Contact() {
                 </label>
                 <select
                   id="type"
+                  name="type"
                   className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)]"
                 >
                   <option className="bg-[var(--charcoal)]">Rodinný dům</option>
@@ -156,6 +179,7 @@ export function Contact() {
                 </label>
                 <textarea
                   id="msg"
+                  name="msg"
                   rows={4}
                   className="w-full bg-transparent border-b border-white/15 py-3 text-foreground outline-none focus:border-[var(--gold)] resize-none"
                 />
@@ -168,7 +192,7 @@ export function Contact() {
               >
                 {sent ? (
                   <>
-                    <Check size={16} /> Odesláno – ozveme se
+                    <Check size={16} /> E-mail otevřen – dokončete odeslání
                   </>
                 ) : (
                   <>
@@ -178,7 +202,7 @@ export function Contact() {
                 )}
               </button>
               <p className="text-[11px] text-muted-foreground">
-                Odesláním souhlasíte se zpracováním osobních údajů pro účely
+                Po kliknutí se otevře váš e-mailový program s předvyplněnou zprávou, kterou už jen odešlete. Odesláním souhlasíte se zpracováním osobních údajů pro účely
                 vyřízení poptávky. Více v{" "}
                 <a href={pageUrl("ochrana-osobnich-udaju")} className="underline">
                   zásadách ochrany osobních údajů
