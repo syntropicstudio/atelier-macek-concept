@@ -38,7 +38,7 @@ const services = [
   },
   {
     icon: Building2,
-    title: "Technický dozor stavebníka",
+    title: "Poradenství při koupi nemovitosti",
     desc: "Nezávislá kontrola kvality prací a dodržování rozpočtu na stavbě.",
   },
   {

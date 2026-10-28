@@ -45,21 +45,6 @@ export function About() {
               řešili minimum starostí.
             </p>
 
-            <dl className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
-              {[
-                { icon: Award, k: "Autorizace ČKAIT", v: "obor pozemní stavby" },
-                { icon: ShieldCheck, k: "Kvalita a bezpečnost", v: "ISO standardy" },
-                { icon: Scale, k: "Etický kodex", v: "člen odborných komor" },
-              ].map(({ icon: I, k, v }) => (
-                <div key={k} className="bg-[var(--charcoal)] p-6">
-                  <I size={20} className="text-[var(--gold)] mb-3" strokeWidth={1.5} />
-                  <dt className="font-display text-lg text-foreground">{k}</dt>
-                  <dd className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                    {v}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </div>
         </div>
       </div>

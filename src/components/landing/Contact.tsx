@@ -29,9 +29,9 @@ export function Contact() {
             <dl className="mt-12 grid gap-6">
               {[
                 { icon: MapPin, k: "Sídlo", v: "Otevřená 680/7, 664 34 Kuřim" },
+                { icon: MapPin, k: "Kancelář", v: "Křížkovského 1770/7 Kuřim" },
                 { icon: Phone, k: "Telefon", v: "+420 777 123 456" },
                 { icon: Mail, k: "E-mail", v: "info@ateliermacek.cz" },
-                { icon: Clock, k: "Otevírací doba", v: "Po–Pá 8:00 – 17:00 · dle domluvy" },
                 { icon: Building, k: "IČO / DIČ", v: "17738377 · CZ17738377" },
               ].map(({ icon: I, k, v }) => (
                 <div key={k} className="flex items-start gap-5">

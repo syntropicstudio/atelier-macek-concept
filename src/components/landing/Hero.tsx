@@ -61,9 +61,9 @@ export function Hero() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10 fade-up">
           {[
             ["15+", "let zkušeností"],
-            ["300+", "dokončených projektů"],
+            ["100+", "dokončených projektů"],
             ["98%", "spokojených klientů"],
-            ["120+", "stavebních povolení"],
+            ["50+", "stavebních povolení"],
           ].map(([n, l]) => (
             <div key={l}>
               <div className="font-display text-4xl md:text-5xl text-[var(--gold)]">{n}</div>
