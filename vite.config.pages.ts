@@ -10,6 +10,9 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 export default defineConfig({
   // Must match the GitHub repository name for project pages.
   base: "/atelier-macek-concept/",
+  define: {
+    "import.meta.env.VITE_PAGES_SPA": JSON.stringify("true"),
+  },
   plugins: [
     TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
     react(),

@@ -106,6 +106,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  // The Pages SPA is mounted into #root of index.html; rendering <html>/<body> there
+  // breaks React's event system (page freezes on focusing a text field).
+  if (import.meta.env.VITE_PAGES_SPA) return <>{children}</>;
   return (
     <html lang="cs">
       <head>
