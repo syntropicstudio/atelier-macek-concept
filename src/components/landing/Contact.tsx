@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { pageUrl } from "@/lib/url";
 import { Phone, Mail, MapPin, Clock, Building, Send, Check } from "lucide-react";
 
-const CONTACT_EMAIL = "info@ateliermacek.cz";
+const CONTACT_EMAIL = "macek@ateliermacek.cz";
 const MAX_MAILTO_LENGTH = 1800;
 
 export function Contact() {
@@ -54,8 +54,8 @@ export function Contact() {
               {[
                 { icon: MapPin, k: "Sídlo", v: "Otevřená 680/7, 664 34 Kuřim" },
                 { icon: MapPin, k: "Kancelář", v: "Křížkovského 1770/7 Kuřim" },
-                { icon: Phone, k: "Telefon", v: "+420 777 123 456" },
-                { icon: Mail, k: "E-mail", v: "info@ateliermacek.cz" },
+                { icon: Phone, k: "Telefon", v: "+420 608 941 948" },
+                { icon: Mail, k: "E-mail", v: "macek@ateliermacek.cz" },
                 { icon: Building, k: "IČO / DIČ", v: "17738377 · CZ17738377" },
               ].map(({ icon: I, k, v }) => (
                 <div key={k} className="flex items-start gap-5">

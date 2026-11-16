@@ -50,13 +50,13 @@ export function Footer() {
                 <li>664 34 Kuřim</li>
                 <li>IČO 17738377</li>
                 <li>
-                  <a href="mailto:info@ateliermacek.cz" className="hover:text-[var(--gold)]">
-                    info@ateliermacek.cz
+                  <a href="mailto:macek@ateliermacek.cz" className="hover:text-[var(--gold)]">
+                    macek@ateliermacek.cz
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+420777123456" className="hover:text-[var(--gold)]">
-                    +420 777 123 456
+                  <a href="tel:+420608941948" className="hover:text-[var(--gold)]">
+                    +420 608 941 948
                   </a>
                 </li>
               </ul>

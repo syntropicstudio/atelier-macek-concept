@@ -15,10 +15,11 @@ export function About() {
               height={1600}
               className="w-full h-[520px] md:h-[640px] object-cover"
             />
-            <div className="absolute -bottom-6 -right-6 hidden md:block bg-[var(--gold)] text-[var(--ink)] p-8 max-w-[240px]">
+            <div className="absolute -bottom-6 -right-6 hidden md:block bg-[var(--gold)] text-[var(--ink)] p-8 max-w-[300px]">
               <div className="font-display text-5xl leading-none">2022</div>
-              <div className="mt-3 text-[11px] uppercase tracking-[0.22em]">
-                Založení společnosti · zkušenosti týmu 15+ let
+              <div className="mt-3 space-y-1 leading-relaxed text-[11px] uppercase tracking-[0.16em]">
+                <div>Založení společnosti</div>
+                <div>Zkušenosti týmu 15+ let</div>
               </div>
             </div>
           </div>
@@ -39,7 +40,7 @@ export function About() {
               že dobrá architektura vzniká z respektu ke klientovi, místu
               i zákonům statiky.
             </p>
-            <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               Tým autorizovaných inženýrů se stará o kompletní dokumentaci,
               stavebně-technický dozor a vyřízení povolení tak, abyste vy sami
               řešili minimum starostí.

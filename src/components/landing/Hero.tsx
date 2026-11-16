@@ -34,8 +34,9 @@ export function Hero() {
           </h1>
           <p className="mt-8 max-w-xl text-base md:text-lg text-foreground/70 leading-relaxed">
             Precizní projektová dokumentace, inženýrská činnost a technické
-            poradenství pro rodinné domy, bytové stavby i komerční projekty.
-            Provedeme vás každou etapou stavby s klidem a jistotou.
+            poradenství pro rodinné a bytové domy, stavby a developerské
+            projekty. Provedeme vás každou etapou vašeho projektu s klidem a
+            jistotou.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4">

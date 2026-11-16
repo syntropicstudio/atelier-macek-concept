@@ -48,13 +48,13 @@ const services = [
   },
   {
     icon: Home,
-    title: "Rodinné domy",
-    desc: "Individuální návrhy rodinných domů šité na míru vašemu pozemku.",
+    title: "Rodinné a bytové domy",
+    desc: "Individuální návrhy rodinných a bytových domů šité na míru vašemu pozemku.",
   },
   {
     icon: Warehouse,
-    title: "Komerční stavby",
-    desc: "Administrativní, výrobní a obchodní objekty s důrazem na provoz.",
+    title: "Stavby a developerské projekty",
+    desc: "Administrativní, výrobní, obchodní i developerské projekty s důrazem na provoz.",
   },
 ];
 
