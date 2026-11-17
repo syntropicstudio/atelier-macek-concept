@@ -18,8 +18,8 @@
 - Telefon: +420 777 123 456
 
 ## Odkazy
-- [Hlavní stránka](https://syntropicstudio.github.io/atelier-macek-concept/): přehled služeb, referencí a kontaktů
-- [Kontakt a poptávka](https://syntropicstudio.github.io/atelier-macek-concept/#kontakt)
-- [Sitemap](https://syntropicstudio.github.io/atelier-macek-concept/sitemap.xml)
-- [Ochrana osobních údajů](https://syntropicstudio.github.io/atelier-macek-concept/ochrana-osobnich-udaju)
-- [Cookies](https://syntropicstudio.github.io/atelier-macek-concept/cookies)
+- [Hlavní stránka](https://ateliermacek.cz/): přehled služeb, referencí a kontaktů
+- [Kontakt a poptávka](https://ateliermacek.cz/#kontakt)
+- [Sitemap](https://ateliermacek.cz/sitemap.xml)
+- [Ochrana osobních údajů](https://ateliermacek.cz/ochrana-osobnich-udaju)
+- [Cookies](https://ateliermacek.cz/cookies)

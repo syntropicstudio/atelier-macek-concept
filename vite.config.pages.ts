@@ -8,8 +8,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  // Must match the GitHub repository name for project pages.
-  base: "/atelier-macek-concept/",
+  // Root base path for custom domain deployment.
+  base: "/",
   define: {
     "import.meta.env.VITE_PAGES_SPA": JSON.stringify("true"),
   },
