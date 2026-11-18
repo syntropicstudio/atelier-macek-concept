@@ -1,2 +1,2 @@
-// BASE_URL is "/" in dev and "/atelier-macek-concept/" in the Pages build.
+// BASE_URL is "/" (site is served from the custom domain root).
 export const pageUrl = (path = "") => `${import.meta.env.BASE_URL}${path}`;

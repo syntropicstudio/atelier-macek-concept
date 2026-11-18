@@ -26,4 +26,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://syntropicstudio.github.io/atelier-macek-concept/sitemap.xml
+Sitemap: https://ateliermacek.cz/sitemap.xml
